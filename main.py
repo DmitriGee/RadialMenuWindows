@@ -235,7 +235,7 @@ ErrorFontSmall = pygame.font.SysFont("Arial", 16, False, False)
 LabelFont = pygame.font.SysFont("Arial", 20, True, False)
 DescriptionFont = pygame.font.SysFont("Arial", 16, False, False)
 MissingItemsText = ErrorFont.render("Add some shortcuts to get started!", C_ANTI_ALIASING, CFG["menu"]["error"])
-MissingFolderText = ErrorFont.render("Error: Start Menu Folder Missing!", C_ANTI_ALIASING, CFG["menu"]["error"])
+MissingFolderText = ErrorFont.render("Error: Apps Folder Missing!", C_ANTI_ALIASING, CFG["menu"]["error"])
 ConfigurationErrorText = ErrorFont.render("Error: The configuration file could not be read!", C_ANTI_ALIASING, CFG["menu"]["error"])
 ConfigurationErrorReasonText = ErrorFontSmall.render(f"Reason: {ConfigurationErrorReason}", C_ANTI_ALIASING, CFG["menu"]["error"])
 
