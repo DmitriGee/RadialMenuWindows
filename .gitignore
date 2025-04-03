@@ -1,4 +1,5 @@
 apps/*
+!apps/.gitkeep
 config.json
 .vscode/
 
