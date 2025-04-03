@@ -42,10 +42,10 @@ Next, create a new shortcut. Title it "Radial Menu" (or whatever you want), set 
 ## Known Bugs:
 - Launching the menu on a different display still reads the mouse position relative to display 0
 - Some apps refuse to launch 
-- The optional key shortcut can only be actiaved when focused on an open window.
-- Shortcuts may take longer to launch the longer windows has been run for since boot.
+- The optional key shortcut can only be activaed when focused on an open window.
+- The raidal menu takes forever to launch.
 
 ### Temporary Fixes:
-#### Shortcuts take longer than expected to open:
+#### The radial menu takes forever to launch:
 Open Services. Find "SysMain" in the list of services. Disable it and set StartupType to Disabled. Reboot.
-> WARNING: As of testing, this has not caused any noticeable system degredation and/or failure. Your results may vary. As this is a windows-related issue, consistent fixes may not be available.
+> WARNING: As of testing, this has caused some parts of windows to slow down, such as File Explorer and the windows Start Menu, but has not caused any failures. Your results may vary. As this is a windows-related issue, consistent fixes may not be available as of development.
