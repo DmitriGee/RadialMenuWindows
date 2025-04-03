@@ -1,0 +1,112 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema", "$comment": "This is the latest version fully supported by VSCode.",
+    "type": "object",
+    "properties": {
+        "menu": {
+            "type": "object",
+            "properties": {
+                "transparency": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 255
+                },
+                "primary": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 255
+                    },
+                    "minItems": 3,
+                    "maxItems": 3,
+                    "additionalProperties": false
+                },
+                "secondary": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 255
+                    },
+                    "minItems": 3,
+                    "maxItems": 3,
+                    "additionalProperties": false
+                },
+                "tertiary": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 255
+                    },
+                    "minItems": 3,
+                    "maxItems": 3,
+                    "additionalProperties": false
+                },
+                "error": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 255
+                    },
+                    "minItems": 3,
+                    "maxItems": 3,
+                    "additionalProperties": false
+                },
+                "performance": {
+                    "type": "object",
+                    "properties": {
+                        "framerate": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "resolution": {
+                            "type": "string",
+                            "enum": ["ultra","high","medium","low"]
+                        },
+                        "anti-aliasing": {
+                            "type": "boolean"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                "shortcut": {
+                    "type": "object",
+                    "properties": {
+                        "iconsize": {
+                            "type": "integer",
+                            "minimum":0,
+                            "maximum":128
+                        },
+                        "title": {
+                            "type": "array",
+                            "items": {
+                                "type": "integer",
+                                "minimum": 0,
+                                "maximum": 255
+                            },
+                            "minItems": 3,
+                            "maxItems": 3,
+                            "additionalProperties": false
+                        },
+                        "description": {
+                            "type": "array",
+                            "items": {
+                                "type": "integer",
+                                "minimum": 0,
+                                "maximum": 255
+                            },
+                            "minItems": 3,
+                            "maxItems": 3,
+                            "additionalProperties": false
+                        }
+                    },
+                    "additionalProperties": false
+                }
+            },
+            "additionalProperties": false
+        }
+    },
+    "additionalProperties": false
+}
