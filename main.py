@@ -82,7 +82,7 @@ C_PRIMARY_COLOR = CFG["menu"]["primary"]
 C_SECONDARY_COLOR = CFG["menu"]["secondary"]
 C_TERTIARY_COLOR = CFG["menu"]["tertiary"]
 C_TITLE_COLOR = CFG["menu"]["shortcut"]["title"]
-C_DESCRIPTION_COLOR = CFG["menu"]["shortcut"]["title"]
+C_DESCRIPTION_COLOR = CFG["menu"]["shortcut"]["description"]
 
 
 FolderMissing = False
@@ -285,9 +285,9 @@ while not done:
             
             window.blit(shortcuts[i]["icon"], (pos[0]-C_ICONSIZE/2, pos[1]-C_ICONSIZE/2))
         
-        text = LabelFont.render(shortcuts[selection]["name"][0:30]+"..." if len(shortcuts[selection]["name"]) > 30 else shortcuts[selection]["name"], True, CFG["menu"]["shortcut"]["title"])
+        text = LabelFont.render(shortcuts[selection]["name"][0:30]+"..." if len(shortcuts[selection]["name"]) > 30 else shortcuts[selection]["name"], True, C_TITLE_COLOR)
         window.blit(text, (center[0]-text.get_width()/2,center[1]-text.get_height()/2-10))
-        text = DescriptionFont.render(shortcuts[selection]["target"][0:90]+"..." if len(shortcuts[selection]["target"]) > 90 else shortcuts[selection]["target"], True, CFG["menu"]["shortcut"]["description"])
+        text = DescriptionFont.render(shortcuts[selection]["target"][0:90]+"..." if len(shortcuts[selection]["target"]) > 90 else shortcuts[selection]["target"], True, C_DESCRIPTION_COLOR)
         window.blit(text, (center[0]-text.get_width()/2,center[1]-text.get_height()/2+10))
 
         if pygame.mouse.get_pressed(3)[0]:
